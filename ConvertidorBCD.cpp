@@ -1,5 +1,4 @@
 #include "ConvertidorBCD.h"
-#include "enum.h"
 
 ConvertidorBCD::ConvertidorBCD(TipoDisplay disp) {
   this->disp = disp;
@@ -11,4 +10,8 @@ ConvertidorBCD::ConvertidorBCD(TipoDisplay disp) {
 
 void ConvertidorBCD::invertir() {
   this->puerto = ~this->puerto;
+}
+
+TipoDisplay ConvertidorBCD::getDisplay() {
+  return this->disp;
 }

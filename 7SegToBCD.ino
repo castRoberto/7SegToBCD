@@ -1,10 +1,9 @@
 #include "ConvertidorBCD.h"
-#include "enum.h"
 
-ConvertidorBCD SevenSegToBCD(CATODO);
+ConvertidorBCD Display(CATODO);
 
 void setup() {
-  
+  Serial.begin(9600);
 }
 
 void loop() {

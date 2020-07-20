@@ -10,6 +10,7 @@ class ConvertidorBCD {
     void invertir();
   public:
     ConvertidorBCD(TipoDisplay disp);
+    TipoDisplay getDisplay();
 };
 
 #endif // CONVERTIDOR_BCD_H
