@@ -1,11 +1,5 @@
-#ifndef CABECERA_H
-#define CABECERA_H
-#include <Arduino.h>
-
-typedef enum TopologiaDisplay {
-  ANODO,
-  CATODO
-}TipoDisplay;
+#ifndef MACROS_H
+#define MACROS_H
 
 #define a bool(puerto & (1<<1))
 #define b bool(puerto & (1<<2))
@@ -15,4 +9,4 @@ typedef enum TopologiaDisplay {
 #define f bool(puerto & (1<<6))
 #define g bool(puerto & (1<<0))
 
-#endif // CABECERA_H
+#endif // MACROS_H
