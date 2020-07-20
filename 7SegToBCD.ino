@@ -1,21 +1,24 @@
 #include "Cabecera.h"
 
 unsigned char puerto;
-bool tipoDisplay = 1; // Catodo = 0, Anodo = 1
+
+TipoDisplay disp = CATODO;
 
 // #define STRINGIFY_(M) #M   (Donvierte a M en string)
 
 void setup() {
+  Serial.begin(9600);
   // DIRECCIONAMIENTO DE PUERTOS
   DDRD = 0b00000010;  // 0 = entrada, 1 = salida
   DDRB = 0b00011110;
 }
 
 void loop() {
+  Serial.println(disp);
   puerto = ((PIND >> 1) | (PINB & (1<<PB0))); // Crear puerto (Leer estados 7 segmentos)
 
   // TIPO DE DISPLAY
-  if(tipoDisplay) {
+  if(disp == ANODO) {
     invertir(); 
   }
 
