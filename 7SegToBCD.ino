@@ -3,11 +3,12 @@
 ConvertidorBCD Display(CATODO);
 
 void setup() {
-  Serial.begin(9600);
 }
 
 void loop() {
-  
+  Display.SevenSegRead();
+  Display.ToBCD();
+  Display.PrintBCD();
 }
 
 // #define STRINGIFY_(M) #M   (Donvierte a M en string)
