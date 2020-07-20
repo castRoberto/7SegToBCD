@@ -2,6 +2,11 @@
 #define CABECERA_H
 #include <Arduino.h>
 
+typedef enum TopologiaDisplay {
+  ANODO,
+  CATODO
+}TipoDisplay;
+
 #define a bool(puerto & (1<<1))
 #define b bool(puerto & (1<<2))
 #define c bool(puerto & (1<<3))

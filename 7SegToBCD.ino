@@ -1,7 +1,8 @@
 #include "Cabecera.h"
 
 unsigned char puerto;
-bool tipoDisplay = 1; // Catodo = 0, Anodo = 1
+
+TipoDisplay disp = CATODO;
 
 // #define STRINGIFY_(M) #M   (Donvierte a M en string)
 
@@ -15,7 +16,7 @@ void loop() {
   puerto = ((PIND >> 1) | (PINB & (1<<PB0))); // Crear puerto (Leer estados 7 segmentos)
 
   // TIPO DE DISPLAY
-  if(tipoDisplay) {
+  if(disp == ANODO) {
     invertir(); 
   }
 
