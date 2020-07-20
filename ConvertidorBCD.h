@@ -1,11 +1,14 @@
-#ifndef CABECERA_H
-#define CABECERA_H
+#ifndef CONVERTIDOR_BCD_H
+#define CONVERTIDOR_BCD_H
 #include <Arduino.h>
+#include "enum.h"
 
-typedef enum TopologiaDisplay {
-  ANODO,
-  CATODO
-}TipoDisplay;
+class ConvertidorBCD {
+  private:
+    unsigned char puerto;
+  public:
+    ConvertidorBCD();
+};
 
 #define a bool(puerto & (1<<1))
 #define b bool(puerto & (1<<2))
@@ -15,4 +18,4 @@ typedef enum TopologiaDisplay {
 #define f bool(puerto & (1<<6))
 #define g bool(puerto & (1<<0))
 
-#endif // CABECERA_H
+#endif // CONVERTIDOR_BCD_H

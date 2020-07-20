@@ -1,6 +1,5 @@
-#include "Cabecera.h"
-
-unsigned char puerto;
+#include "ConvertidorBCD.h"
+#include "enum.h"
 
 TipoDisplay disp = CATODO;
 
