@@ -24,9 +24,9 @@ void ConvertidorBCD::invertir() {
 void ConvertidorBCD::ToBCD() {
   // MATEMATICA BOOLEANA
   this->A = ((c & !f) | (a & !e)) | h;                       // (C*~F)+(A*~E)
-  this->B = ((!b & e) | (a & !f)) | h;                         // (~B*E)+(A*~F)
-  this->C = !b | (a & !d & !f) | (!a & f);               // (~B)+(A*~D*~F)+(~A*F)
-  this->D = (a & b & f & g) | h;                              // (A*B*F*G)
+  this->B = ((!b & e) | (a & !f)) | h;                       // (~B*E)+(A*~F)
+  this->C = !b | (a & !d & !f) | (!a & f);                   // (~B)+(A*~D*~F)+(~A*F)
+  this->D = (a & b & f & g) | h;                             // (A*B*F*G)
 }
 
 void ConvertidorBCD::PrintBCD() {
